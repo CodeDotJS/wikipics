@@ -38,7 +38,7 @@ $ npm install --global wikipics
 
 ```
 
-__`NOTE :`__
+__`NOTE :`__ `Files along with complete descriptions are saved in` __`wikipics`__ `folder under home directory`
 
 ## Related
 
