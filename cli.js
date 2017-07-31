@@ -108,7 +108,7 @@ if (arg === '-t' || arg === '--today') {
 	got(url).then(res => {
 		downloadMessage();
 		const $ = cheerio.load(res.body);
-		const imgSource = `https:${$('img').eq(1).attr('src').replace('/thumb', '').split("/").slice(0, -1).join("/")}`;
+		const imgSource = `https:${$('img').eq(1).attr('src').replace('/thumb', '').split('/').slice(0, -1).join('/')}`;
 		const imgName = imgSource.split('/').slice(-1)[0];
 		const imgData = $('.mw-body-content p').eq(0).text();
 
@@ -125,7 +125,7 @@ if (arg === '-d' || arg === '--date') {
 	got(`${url}/${inf}`).then(res => {
 		downloadMessage();
 		const $ = cheerio.load(res.body);
-		const imgSource = `https:${$('img').attr('src').replace('/thumb', '').split("/").slice(0, -1).join("/")}`;
+		const imgSource = `https:${$('img').attr('src').replace('/thumb', '').split('/').slice(0, -1).join('/')}`;
 
 		const imgName = imgSource.split('/').slice(-1)[0];
 		const imgData = $('.mw-body-content p').eq(0).text();
